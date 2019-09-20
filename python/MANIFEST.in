@@ -1,2 +1,3 @@
 include BSD
 include LGPL
+include *.rst

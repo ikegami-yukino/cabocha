@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from codecs import open
 import os
 import platform
 import sys
@@ -72,12 +73,6 @@ setup(name="cabocha-python",
           'Topic :: Text Processing'
       ],
       description='Python wrapper for CaboCha: Japanese Dependency Structure Analyzer',
-      long_description='''This is a python wrapper for CaboCha.
-
-      NOTE: It does not sopport Windows Python 64bit version.
-
-    License
-    ---------
-    CaboCha is copyrighted free software by Taku Kudo <taku@chasen.org> is released under any of the the LGPL or the BSD License.
-    '''
-      )
+      long_description='%s\n\n%s' % (open('README.rst', encoding='utf8').read(),
+                                     open('CHANGES.rst', encoding='utf8').read())
+)
